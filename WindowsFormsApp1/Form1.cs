@@ -45,9 +45,9 @@ namespace WindowsFormsApp1
                         // オリジナルのファイル名から拡張子を抽出
                         string originalExtension = Path.GetExtension(selectedFilePath);
 
-                        // 現在の日付を取得
-                        DateTime currentDate = monthCalendar1.SelectionStart;
-                        string datePart = currentDate.ToString("yyyy_MM_dd");
+                        // カレンダーから登録する日付を取得
+                        DateTime selectedDate = monthCalendar1.SelectionStart;
+                        string datePart = selectedDate.ToString("yyyy_MM_dd");
 
                         // 新しいファイル名を生成（日付を含む）
                         string newFileName = datePart + "_" + newFileNameCompany + "_" + newFileNameAmount + originalExtension;
